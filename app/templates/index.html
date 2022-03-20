@@ -5,25 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Crypto Tracker</title>
+    <link rel="stylesheet" href="../static/style.css"></link>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
 </head>
 <body>
     
-    <header>
-        <h1>Crypto Tracker</h1>
-        <form action="">
-            <input type="submit" value="Acheter">
-        </form>
-        <form action="">
-            <input type="submit" value="Vendre">
-        </form>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Crypto Tracker</h1>
+            <div class="menu_buttons">
+                <form action="">
+                    <input type="submit" value="Acheter">
+                </form>
+                <form action="">
+                    <input type="submit" value="Vendre">
+                </form>
+            </div>
+        </header>
 
-    <div class="list_crypto">
-        <div class="crypto1">
-            {{ crypto1 }}
+        <div class="invests">
+            <p class="total_invests">{{ total_invests }} €</p>
+            <p class="win_loss">+ 560 €</p>
         </div>
-        <div class="crypto2">
-            {{ crypto2 }}
+
+        <div class="list_crypto">
+            <div class="crypto">
+                {{ btc_symbol }} ({{ btc_name }})
+            </div>
+            <div class="crypto">
+                {{ eth_symbol }} ({{ eth_name }})
+            </div>
         </div>
     </div>
 
