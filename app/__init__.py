@@ -21,7 +21,10 @@ btc_name = data['data']['BTC']['name']
 eth_symbol = list(data['data'])[1]
 eth_name = data['data']['ETH']['name']
 
-list_cryptos = {btc_name: round(BTC_price, 2), eth_name: round(ETH_price, 2)}
+list_cryptos = [
+                {"crypto": btc_name, "price": round(BTC_price, 2)},
+                {"crypto": eth_name, "price": round(ETH_price, 2)}
+            ]
 
 if win_loss >= 0:
     symbol_win_loss = "+"
@@ -50,4 +53,14 @@ def create_app():
         return render_template('achat.html', cryptos=list_cryptos)
 
 
+    @app.route('/vente/', methods=["POST", "GET"])
+    def sell():
+        
+        return render_template('vente.html', cryptos=list_cryptos)
+
+
     return app
+
+
+    return app
+
