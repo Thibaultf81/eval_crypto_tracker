@@ -21,7 +21,6 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #efefef;
     background-color: #100f0f;
-    border: 1px solid black;
 }
 
 header {
@@ -44,6 +43,7 @@ header {
 .menu_buttons form input {
     background: none;
     border: 1px solid #efefef;
+    border-radius: 5px;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     color: #efefef;
@@ -64,9 +64,8 @@ h1 {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    border: 1px solid white;
 }
 
 .invests p {
@@ -86,7 +85,7 @@ h1 {
 .list_crypto {
     width: 70%;
     height: 100%;
-    margin: auto;
+    margin: 50px auto;
     text-align: center;
 }
 
@@ -94,4 +93,45 @@ h1 {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid grey;
+}
+
+
+/* Styles de la page "achat.html" */
+
+
+.formulaire {
+    width: 70%;
+    height: 30%;
+    margin: 100px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.formulaire select {
+    background-color: #100f0f;
+    font-family: 'Roboto', sans-serif;
+    color: #efefef;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    width: 100%;
+}
+
+.formulaire form {
+    width: 100%;
+}
+
+.formulaire input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #100f0f;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: #efefef;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #efefef;
 }

@@ -16,7 +16,7 @@
         <header>
             <h1>Crypto Tracker</h1>
             <div class="menu_buttons">
-                <form action="/achat/">
+                <form action="">
                     <input type="submit" value="Acheter">
                 </form>
                 <form action="">
@@ -25,19 +25,27 @@
             </div>
         </header>
 
-        <div class="invests">
-            <p class="total_invests">{{ total_invests }} €</p>
-            <p class="win_loss">+/- values : {{ symbol_win_loss }}{{ win_loss }} €</p>
+        <div class="formulaire">
+
+            <input type="text" name="list_crypto" placeholder="choisissez une crypto" list="cryptos">
+            <datalist id="cryptos">
+                {% for crypto, price in cryptos.items() %}
+                <option>{{ crypto }} : {{ price}} € l'unité</option>
+                {% endfor %}
+            </datalist>
+
+
+            <form action="#" method="post">
+                <input type="text" name="quantity_crypto" placeholder="Quantité"/>
+            </form>
+
+            <button type="submit" name="ajouter">Ajouter</button>
+
+            
+
         </div>
 
-        <div class="list_crypto">
-            <div class="crypto">
-                {{ btc_symbol }} ({{ btc_name }}) - investi : {{ BTC_invest }} €
-            </div>
-            <div class="crypto">
-                {{ eth_symbol }} ({{ eth_name }}) - investi : {{ ETH_invest }} €
-            </div>
-        </div>
+
     </div>
 
 </body>
