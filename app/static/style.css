@@ -16,7 +16,7 @@ body {
 
 .container {
     width: 428px;
-    height: 700px;
+    height: 1200px;
     margin: auto;
     font-family: 'Roboto', sans-serif;
     color: #efefef;
@@ -85,7 +85,7 @@ h1 {
 .list_crypto {
     width: 70%;
     height: 100%;
-    margin: 50px auto;
+    margin: 20px auto;
     text-align: center;
 }
 
@@ -134,4 +134,8 @@ h1 {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #efefef;
+}
+
+#price:-moz-read-only {
+
 }

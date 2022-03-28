@@ -27,17 +27,17 @@
 
         <div class="formulaire">
 
-            <select name="crypto_list" id="select_crypto">
+            <select name="crypto_list" id="select_crypto" onChange="updateCrypto()">
                
                 <option value="">Sélectionnez une crypto</option>
-                <option value="BTC">Bitcoin</option>
-                <option value="ETH">Ethereum</option>
-
-                <input type="text" placeholder="Montant (€)" value=""/>
-                <input type="text" name="quantity_crypto" placeholder="Quantité"/>
+                {% for crypto, details in crypto_list.items() %}
+                <option value="{{ details['price'] }} € l'unité">{{ crypto }}</option>
+                {% endfor %}
                 
             </select>
 
+            <input type="text" placeholder="Montant (€)" id="price" disabled="disabled"/>
+            <input type="text" name="quantity_crypto" placeholder="Quantité"/>
             
 
             <button type="submit">Ajouter</button>
@@ -45,6 +45,25 @@
         </div>
 
     </div>
+
+    <script type="text/javascript"> // Javascript pour afficher dynamiquement les cryptomonnaies dans l'application
+        
+        let crypto = JSON.parse('{{ crypto_list|tojson }}')
+        // console.log(crypto['Bitcoin'])
+
+        function updateCrypto() {
+            var select = document.getElementById('select_crypto');
+            var option = select.options[select.selectedIndex];
+
+            document.getElementById('price').value = option.value;
+
+        }
+
+        updateCrypto()
+
+
+    </script>
+
 
 </body>
 </html>
