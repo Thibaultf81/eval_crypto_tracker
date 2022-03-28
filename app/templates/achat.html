@@ -29,9 +29,14 @@
 
             <select name="select_crypto" id="select_crypto" onChange="updateCrypto()">
             
-                <option value="">Sélectionnez une crypto</option>
+                <!-- <option value="">Sélectionnez une crypto</option>
                 {% for crypto, details in crypto_list.items() %}
                 <option value="{{ details['price'] }} € l'unité">{{ crypto }}</option>
+                {% endfor %} -->
+
+                <option value="">Sélectionnez une crypto</option>
+                {% for crypto, details in crypto_list.items() %}
+                <option value="{{ crypto }}">{{ crypto }}</option>
                 {% endfor %}
                 
             </select>
@@ -48,18 +53,35 @@
 
     <script type="text/javascript"> // Javascript pour afficher dynamiquement les cryptomonnaies dans l'application
         
-        let crypto = JSON.parse('{{ crypto_list|tojson }}')
-        // console.log(crypto['Bitcoin'])
+         let crypto = JSON.parse('{{ crypto_list|tojson }}');
+         console.log(crypto);
 
-        function updateCrypto() {
-            var select = document.getElementById('select_crypto');
-            var option = select.options[select.selectedIndex];
 
-            document.getElementById('price').value = option.value;
+         function updateCrypto() {
+                const select = document.getElementById('select_crypto');
+                const option = select.options[select.selectedIndex];
 
-        }
+                const listCrypto = Object.keys(crypto)
+                console.log(listCrypto)
+
+                if (listCrypto.includes(option.value)) {
+                    document.getElementById('price').value = crypto[option.value]['price'] + " € l'unité"
+                }
+            }
 
         updateCrypto()
+
+
+
+         // function updateCrypto() {
+             // var select = document.getElementById('select_crypto');
+             // var option = select.options[select.selectedIndex];
+
+             // document.getElementById('price').value['price'] = option.value;
+
+         // }
+
+         // updateCrypto()
 
 
     </script>

@@ -20,6 +20,13 @@ def buyPage():
     
     return render_template('achat.html', crypto_list=crypto_list)
 
+
+
+
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
         
