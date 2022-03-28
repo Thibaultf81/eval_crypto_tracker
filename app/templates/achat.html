@@ -25,10 +25,10 @@
             </div>
         </header>
 
-        <div class="formulaire">
+        <form class="formulaire" method="POST">
 
-            <select name="crypto_list" id="select_crypto" onChange="updateCrypto()">
-               
+            <select name="select_crypto" id="select_crypto" onChange="updateCrypto()">
+            
                 <option value="">Sélectionnez une crypto</option>
                 {% for crypto, details in crypto_list.items() %}
                 <option value="{{ details['price'] }} € l'unité">{{ crypto }}</option>
@@ -42,7 +42,7 @@
 
             <button type="submit">Ajouter</button>
 
-        </div>
+        </form>
 
     </div>
 

@@ -120,10 +120,6 @@ h1 {
     width: 100%;
 }
 
-.formulaire form {
-    width: 100%;
-}
-
 .formulaire input {
     width: 100%;
     box-sizing: border-box;
@@ -136,6 +132,27 @@ h1 {
     border: 1px solid #efefef;
 }
 
-#price:-moz-read-only {
-
+.formulaire button {
+    width: 50%;
+    box-sizing: border-box;
+    background-color: #100f0f;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: #efefef;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    cursor: pointer;
+}
+.formulaire button:hover {
+    width: 50%;
+    box-sizing: border-box;
+    background-color: grey;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: #efefef;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    cursor: pointer;
 }

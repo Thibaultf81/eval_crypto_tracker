@@ -1,24 +1,29 @@
 from flask import Flask, render_template, request
-# from pprint import pprint
+import json
 
-from app.api import get_crypto
-crypto_list = get_crypto()
+from pprint import pprint
 
-BTC_invest = 3000
-ETH_invest = 2000
+# On récupère la base de données json que l'on instance avec la variable "crypto_list"
+with open("app/list_crypto.json", "r") as f:
+    crypto_list = json.load(f)
 
-def create_app():
-    app = Flask(__name__)
+# def create_app():
+app = Flask(__name__)
 
-    @app.route('/')
-    def homepage():
+@app.route('/')
+def homepage():
 
-        return render_template('index.html', crypto_list=crypto_list)
+    return render_template('index.html', crypto_list=crypto_list)
 
-    @app.route('/achat/', methods=["POST", "GET"])
-    def buy():
+@app.route('/achat/', methods=["POST", "GET"])
+def buyPage():
+    
+    return render_template('achat.html', crypto_list=crypto_list)
+
+if __name__ == '__main__':
+    app.run(debug=True)
         
-        return render_template('achat.html', crypto_list=crypto_list)
+
 
 
     # @app.route('/vente/', methods=["POST", "GET"])
@@ -27,5 +32,5 @@ def create_app():
     #     return render_template('vente.html', cryptos=list_cryptos)
 
 
-    return app
+    # return app
 
