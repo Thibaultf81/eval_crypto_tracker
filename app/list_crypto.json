@@ -3,7 +3,7 @@
         "symbol": "BTC",
         "price": 42792.01,
         "percent_change": 4.5921469,
-        "quantity": 0
+        "quantity": 0.003
     },
     "Ethereum": {
         "symbol": "ETH",
@@ -33,7 +33,7 @@
         "symbol": "XRP",
         "price": 0.79,
         "percent_change": 2.4459046,
-        "quantity": 0
+        "quantity": 50.0
     },
     "Cardano": {
         "symbol": "ADA",

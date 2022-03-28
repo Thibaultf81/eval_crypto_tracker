@@ -25,15 +25,10 @@
             </div>
         </header>
 
-        <form class="formulaire" method="POST">
+        <form action = "" class="formulaire" method="POST">
 
             <select name="select_crypto" id="select_crypto" onChange="updateCrypto()">
-            
-                <!-- <option value="">Sélectionnez une crypto</option>
-                {% for crypto, details in crypto_list.items() %}
-                <option value="{{ details['price'] }} € l'unité">{{ crypto }}</option>
-                {% endfor %} -->
-
+        
                 <option value="">Sélectionnez une crypto</option>
                 {% for crypto, details in crypto_list.items() %}
                 <option value="{{ crypto }}">{{ crypto }}</option>
@@ -70,19 +65,6 @@
             }
 
         updateCrypto()
-
-
-
-         // function updateCrypto() {
-             // var select = document.getElementById('select_crypto');
-             // var option = select.options[select.selectedIndex];
-
-             // document.getElementById('price').value['price'] = option.value;
-
-         // }
-
-         // updateCrypto()
-
 
     </script>
 
