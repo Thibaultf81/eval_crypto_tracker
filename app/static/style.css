@@ -51,9 +51,11 @@ header {
 }
 
 
-h1 {
+h1 a {
+    text-decoration: none;
     font-family: 'Akzidenz-Grotesk BQ';
     padding-left: 10px;
+    color: #efefef;
 }
 
 
@@ -132,22 +134,10 @@ h1 {
     border: 1px solid #efefef;
 }
 
-.formulaire button {
+.formulaire .button {
     width: 50%;
     box-sizing: border-box;
     background-color: #100f0f;
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-    color: #efefef;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #efefef;
-    cursor: pointer;
-}
-.formulaire button:hover {
-    width: 50%;
-    box-sizing: border-box;
-    background-color: grey;
     font-size: 1em;
     font-family: 'Roboto', sans-serif;
     color: #efefef;

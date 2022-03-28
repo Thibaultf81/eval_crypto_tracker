@@ -14,7 +14,7 @@
     
     <div class="container">
         <header>
-            <h1>Crypto Tracker</h1>
+            <h1><a href="../">Crypto Tracker</a></h1>
             <div class="menu_buttons">
                 <form action="/achat">
                     <input type="submit" value="Acheter">
@@ -34,7 +34,7 @@
             {% for crypto, details in crypto_list.items() %}
             <div class="crypto">
                 
-                {{ details['symbol'] }} ({{ crypto }}) - investi :  €
+                {{ details['symbol'] }} ({{ crypto }}) - quantité : {{ details['quantity'] }}
                 
             </div>
             {% endfor %}

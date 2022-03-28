@@ -1,122 +1,122 @@
 {
     "Bitcoin": {
         "symbol": "BTC",
-        "price": 42792.01,
-        "percent_change": 4.5921469,
-        "quantity": 0.0005
+        "price": 43162.99,
+        "percent_change": 5.41112049,
+        "quantity": 0
     },
     "Ethereum": {
         "symbol": "ETH",
-        "price": 3023.8,
-        "percent_change": 4.85040832,
+        "price": 3057.84,
+        "percent_change": 5.95755857,
         "quantity": 0
     },
     "Tether": {
         "symbol": "USDT",
         "price": 0.91,
-        "percent_change": -0.72683126,
+        "percent_change": -0.71080022,
         "quantity": 0
     },
     "BNB": {
         "symbol": "BNB",
-        "price": 393.95,
-        "percent_change": 3.34634635,
+        "price": 399.1,
+        "percent_change": 4.86598827,
         "quantity": 0
     },
     "USD Coin": {
         "symbol": "USDC",
         "price": 0.91,
-        "percent_change": -0.71059695,
+        "percent_change": -0.73027782,
         "quantity": 0
     },
     "XRP": {
         "symbol": "XRP",
-        "price": 0.79,
-        "percent_change": 2.4459046,
+        "price": 0.82,
+        "percent_change": 6.56867424,
         "quantity": 0
     },
     "Cardano": {
         "symbol": "ADA",
-        "price": 1.08,
-        "percent_change": 3.14875786,
+        "price": 1.13,
+        "percent_change": 9.87781306,
         "quantity": 0
     },
     "Solana": {
         "symbol": "SOL",
-        "price": 99.24,
-        "percent_change": 6.72696025,
+        "price": 100.92,
+        "percent_change": 9.98892063,
         "quantity": 0
     },
     "Terra": {
         "symbol": "LUNA",
-        "price": 86.44,
-        "percent_change": 3.79410937,
-        "quantity": 5.0
+        "price": 85.85,
+        "percent_change": 3.60079225,
+        "quantity": 0
     },
     "Avalanche": {
         "symbol": "AVAX",
-        "price": 82.58,
-        "percent_change": 4.87489476,
+        "price": 83.42,
+        "percent_change": 6.59508692,
         "quantity": 0
     },
     "Polkadot": {
         "symbol": "DOT",
-        "price": 20.86,
-        "percent_change": 8.19962425,
+        "price": 21.11,
+        "percent_change": 10.20438239,
         "quantity": 0
     },
     "Dogecoin": {
         "symbol": "DOGE",
         "price": 0.14,
-        "percent_change": 5.28832212,
+        "percent_change": 7.6012462,
         "quantity": 0
     },
     "Binance USD": {
         "symbol": "BUSD",
         "price": 0.91,
-        "percent_change": -0.63798357,
+        "percent_change": -0.67701952,
         "quantity": 0
     },
     "TerraUSD": {
         "symbol": "UST",
         "price": 0.91,
-        "percent_change": -0.97994573,
+        "percent_change": -0.77888545,
         "quantity": 0
     },
     "Shiba Inu": {
         "symbol": "SHIB",
         "price": 0.0,
-        "percent_change": 6.57176363,
+        "percent_change": 8.59812616,
         "quantity": 0
     },
     "Polygon": {
         "symbol": "MATIC",
-        "price": 1.55,
-        "percent_change": 4.62351961,
+        "price": 1.57,
+        "percent_change": 5.99949916,
         "quantity": 0
     },
     "Wrapped Bitcoin": {
         "symbol": "WBTC",
-        "price": 42794.54,
-        "percent_change": 4.57655479,
+        "price": 43162.46,
+        "percent_change": 5.46092697,
         "quantity": 0
     },
     "Cronos": {
         "symbol": "CRO",
         "price": 0.45,
-        "percent_change": 5.54704069,
+        "percent_change": 7.64340011,
         "quantity": 0
     },
     "Dai": {
         "symbol": "DAI",
         "price": 0.91,
-        "percent_change": -0.71434648,
+        "percent_change": -0.62278817,
         "quantity": 0
     },
     "Litecoin": {
         "symbol": "LTC",
-        "price": 119.6,
-        "percent_change": 3.89741171,
+        "price": 120.36,
+        "percent_change": 5.23443908,
         "quantity": 0
     }
 }

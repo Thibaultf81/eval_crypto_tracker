@@ -3,9 +3,8 @@ import json
 
 from pprint import pprint
 
-# On récupère la base de données json que l'on instance avec la variable "crypto_list"
-with open("app/list_crypto.json", "r") as f:
-    crypto_list = json.load(f)
+import app.api
+crypto_list = api.get_crypto()
 
 # def create_app():
 app = Flask(__name__)
@@ -17,22 +16,23 @@ def homepage():
     return render_template('index.html', crypto_list=crypto_list)
 
 
-
+# On génère le chemin menant à la page permettant d'acheter une cryptomonnaie
 @app.route('/achat/', methods=["POST", "GET"])
 def buyPage():
     
-    # On récupère la base de données json que l'on instancie avec la variable "crypto_list"
-    with open("app/list_crypto.json", "r") as f:
-        crypto_list = json.load(f)
+    # # On récupère la base de données json que l'on instancie avec la variable "crypto_list"
+    # with open("app/list_crypto.json", "r") as f:
+    #     crypto_list = json.load(f)
     
-    # On récupère la crypto choisie avec la quantité voulu, et on ajoute cette quantité à la crypto en question
-    crypto = request.form['select_crypto']
-    quantity = request.form['quantity_crypto']
-    crypto_list[crypto]['quantity'] = float(quantity)
+    # # On récupère la crypto choisie avec la quantité voulu, et on ajoute cette quantité à la crypto en question
+    # if request.method == 'POST':
+    #     crypto = request.form['select_crypto']
+    #     quantity = request.form['quantity_crypto']
+    #     crypto_list[crypto]['quantity'] += float(quantity)
     
-    # On écrase la base de données avec la quantité que l'on a ajouté à la crypto choisie
-    with open("app/list_crypto.json", "w") as f:
-        json.dump(crypto_list, f, indent=4)
+    # # On écrase la base de données avec la quantité que l'on a ajouté à la crypto choisie
+    # with open("app/list_crypto.json", "w") as f:
+    #     json.dump(crypto_list, f, indent=4)
     
     return render_template('achat.html', crypto_list=crypto_list)
 
