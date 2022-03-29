@@ -1,11 +1,13 @@
 from flask import Flask, render_template, request
 import json
+from emoji import emojize
 
 from pprint import pprint
 
 # On importe la fonction permettant de récupérer les informations de l'API CoinMarketCap
 from app import api
 crypto_list = api.get_crypto()
+
 
 # def create_app():
 app = Flask(__name__)
@@ -22,12 +24,13 @@ def homepage():
     total_invests = 0
     win_loss = 0
     for crypto in wallet_crypto:
-        total_invests += wallet_crypto[crypto]['total_price']
+        total_invests += round(wallet_crypto[crypto]['total_price'], 2)
         win_loss += round(wallet_crypto[crypto]['total_price'] * (crypto_list[crypto]['percent_change'] / 100), 2)
 
     return render_template('index.html', crypto_list=crypto_list,
                                         total_invests=total_invests,
-                                        win_loss=win_loss)
+                                        win_loss=win_loss,
+                                        wallet_crypto=wallet_crypto)
 
 
 # On génère le chemin menant à la page permettant d'acheter une cryptomonnaie

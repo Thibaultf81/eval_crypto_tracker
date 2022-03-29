@@ -8,11 +8,11 @@
         "total_price": 466.75
     },
     "XRP": {
-        "quantity": 150.0,
-        "total_price": 120.0
+        "quantity": 250.0,
+        "total_price": 199.0
     },
-    "Bitcoin": {
-        "quantity": 0.0005,
-        "total_price": 21.584125
+    "Dogecoin": {
+        "quantity": 100.0,
+        "total_price": 13.0
     }
 }
