@@ -36,7 +36,8 @@
                 
             </select>
 
-            <input type="text" placeholder="Montant (€)" id="price" disabled="disabled"/>
+            <label for="price_crypto">Prix unitaire €</label>
+            <input type="text" name="price" placeholder="Montant (€)" id="price_crypto" readonly=""/>
             <input type="text" name="quantity_crypto" placeholder="Quantité"/>
             <input type="submit" class="button" type="button" value="Ajouter">
             
@@ -61,7 +62,7 @@
                 console.log(listCrypto)
 
                 if (listCrypto.includes(option.value)) {
-                    document.getElementById('price').value = crypto[option.value]['price'] + " € l'unité"
+                    document.getElementById('price_crypto').value = crypto[option.value]['price']
                 }
             }
 

@@ -1,0 +1,18 @@
+{
+    "Tether": {
+        "quantity": 50.0,
+        "total_price": 45.5
+    },
+    "Terra": {
+        "quantity": 5.0,
+        "total_price": 466.75
+    },
+    "XRP": {
+        "quantity": 150.0,
+        "total_price": 120.0
+    },
+    "Bitcoin": {
+        "quantity": 0.0005,
+        "total_price": 21.584125
+    }
+}

@@ -32,11 +32,8 @@ def get_crypto():
       details['price'] = round(data['data'][i]['quote']['EUR']['price'], 2)
       details['percent_change'] = data['data'][i]['quote']['EUR']['percent_change_24h']
       
-      
       crypto_list[data['data'][i]['name']] = details
-      
-    # pprint(crypto_list)
-    
+          
     return crypto_list
   except (ConnectionError, Timeout, TooManyRedirects) as e:
     pprint(e)
