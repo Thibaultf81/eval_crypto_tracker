@@ -3,7 +3,7 @@ import json
 from emoji import emojize
 
 # On importe la fonction permettant de récupérer les informations de l'API CoinMarketCap
-from app import api
+import api
 crypto_list = api.get_crypto()
 
 
