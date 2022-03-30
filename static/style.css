@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Akzidenz-Grotesk BQ';
+    src: local('Akzidenz-Grotesk BQ Bold Condensed'), local('Akzidenz-Grotesk-BQ-Bold-Condensed'),
+        url('font/AkzidenzGroteskBQ-BdCnd.woff2') format('woff2'),
+        url('font/AkzidenzGroteskBQ-BdCnd.woff') format('woff'),
+        url('font/AkzidenzGroteskBQ-BdCnd.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 428px;
+    height: 1200px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    color: #efefef;
+    background-color: #100f0f;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #efefef;
+}
+
+.menu_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu_buttons form {
+    padding: 5px;
+}
+
+.menu_buttons form input {
+    background: none;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #efefef;
+    cursor: pointer;
+}
+
+
+h1 a {
+    text-decoration: none;
+    font-family: 'Akzidenz-Grotesk BQ';
+    padding-left: 10px;
+    color: #efefef;
+}
+
+
+.invests {
+    width: 70%;
+    height: 20%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.invests p {
+    margin: 0;
+}
+
+.total_invests {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.win_loss {
+    font-size: 1.5em;
+}
+
+
+.list_crypto {
+    width: 70%;
+    height: 100%;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.crypto {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* Styles de la page "achat.html" */
+
+
+.formulaire {
+    width: 70%;
+    height: 30%;
+    margin: 100px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.formulaire select {
+    background-color: #100f0f;
+    font-family: 'Roboto', sans-serif;
+    color: #efefef;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.formulaire label {
+    left: 0;
+}
+
+.formulaire input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #100f0f;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: #efefef;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    margin-bottom: 30px;
+}
+
+.formulaire .button {
+    width: 50%;
+    box-sizing: border-box;
+    background-color: #100f0f;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: #efefef;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    cursor: pointer;
+}

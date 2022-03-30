@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Crypto Tracker</title>
+    <link rel="stylesheet" href="../static/style.css"></link>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1><a href="../">Crypto Tracker</a></h1>
+            <div class="menu_buttons">
+                <form action="/achat">
+                    <input type="submit" value="Acheter">
+                </form>
+                <form action="">
+                    <input type="submit" value="Vendre">
+                </form>
+            </div>
+        </header>
+
+        <form action = "" class="formulaire" method="POST">
+
+            <select name="select_crypto" id="select_crypto">
+        
+                <option value="">Sélectionnez une crypto</option>
+                {% for crypto, details in crypto_list.items() %}
+                <option value="{{ crypto }}">{{ crypto }}</option>
+                {% endfor %}
+                
+            </select>
+
+            <input type="text" name="quantity_crypto" placeholder="Quantité"/>
+            <input type="submit" class="button" type="button" value="Supprimer">
+            
+        </form>
+
+    </div>
+
+</body>
+</html>
