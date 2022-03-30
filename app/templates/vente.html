@@ -14,7 +14,7 @@
     
     <div class="container">
         <header>
-            <h1>Crypto Tracker</h1>
+            <h1><a href="../">Crypto Tracker</a></h1>
             <div class="menu_buttons">
                 <form action="">
                     <input type="submit" value="Acheter">
@@ -25,24 +25,21 @@
             </div>
         </header>
 
-        <div class="formulaire">
+        <form action = "" class="formulaire" method="POST">
 
-            <select name="crypto_list" id="select_crypto">
-               
+            <select name="select_crypto" id="select_crypto">
+        
                 <option value="">Sélectionnez une crypto</option>
-                <option value="BTC">Bitcoin</option>
-                <option value="ETH">Ethereum</option>
-
-                <input type="text" placeholder="Montant (€)" value=""/>
-                <input type="text" name="quantity_crypto" placeholder="Quantité"/>
+                {% for crypto, details in crypto_list.items() %}
+                <option value="{{ crypto }}">{{ crypto }}</option>
+                {% endfor %}
                 
             </select>
 
+            <input type="text" name="quantity_crypto" placeholder="Quantité"/>
+            <input type="submit" class="button" type="button" value="Supprimer">
             
-
-            <button type="submit">Supprimer</button>
-
-        </div>
+        </form>
 
     </div>
 

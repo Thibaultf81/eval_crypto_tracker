@@ -55,9 +55,6 @@ def buyPage():
             wallet_crypto[crypto] = {}
             wallet_crypto[crypto]['quantity'] = quantity
             wallet_crypto[crypto]['total_price'] = total_price
-        
-        # print(price)
-        
     
     # On écrase la base de données avec la quantité que l'on a ajouté à la crypto choisie
     with open("app/wallet_crypto.json", "w") as f:
@@ -73,11 +70,28 @@ if __name__ == '__main__':
 
 
 
-    # @app.route('/vente/', methods=["POST", "GET"])
-    # def sell():
+@app.route('/vente/', methods=["POST", "GET"])
+def sell():
+    
+    with open("app/wallet_crypto.json", "r") as f:
+        wallet_crypto = json.load(f)
+    
+    if request.method == 'POST':
         
-    #     return render_template('vente.html', cryptos=list_cryptos)
+        crypto = request.form['select_crypto']
+        quantity = float(request.form['quantity_crypto'])
+        
+        if crypto in wallet_crypto.keys():
+            wallet_crypto[crypto]['quantity'] -= quantity
+            wallet_crypto[crypto]['total_price'] -= quantity * crypto_list[crypto]['price']
+            
+        if wallet_crypto[crypto]['quantity'] <= 0:
+            wallet_crypto.pop(crypto)
+    
+    
+    with open("app/wallet_crypto.json", "w") as f:
+        json.dump(wallet_crypto, f, indent=4)
+    
+    return render_template('vente.html', crypto_list=crypto_list)
 
-
-    # return app
 
