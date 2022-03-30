@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Crypto Tracker</title>
+    <link rel="stylesheet" href="../static/style.css"></link>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1><a href="../">Crypto Tracker</a></h1>
+            <div class="menu_buttons">
+                <form action="/achat">
+                    <input type="submit" value="Acheter">
+                </form>
+                <form action="/vente">
+                    <input type="submit" value="Vendre">
+                </form>
+            </div>
+        </header>
+
+        <form action = "" class="formulaire" method="POST">
+
+            <select name="select_crypto" id="select_crypto" onChange="updateCrypto()">
+        
+                <option value="">Sélectionnez une crypto</option>
+                {% for crypto, details in crypto_list.items() %}
+                <option value="{{ crypto }}">{{ crypto }}</option>
+                {% endfor %}
+                
+            </select>
+
+            <label for="price_crypto">Prix unitaire €</label>
+            <input type="text" name="price" placeholder="Montant (€)" id="price_crypto" readonly=""/>
+            <input type="text" name="quantity_crypto" placeholder="Quantité"/>
+            <input type="submit" class="button" type="button" value="Ajouter">
+            
+        </form>
+
+    </div>
+
+    <script type="text/javascript"> // Javascript pour afficher dynamiquement les cryptomonnaies dans l'application
+        
+         let crypto = JSON.parse('{{ crypto_list|tojson }}');
+         console.log(crypto);
+
+
+         function updateCrypto() {
+                const select = document.getElementById('select_crypto');
+                const option = select.options[select.selectedIndex];
+
+                const listCrypto = Object.keys(crypto)
+                console.log(listCrypto)
+
+                if (listCrypto.includes(option.value)) {
+                    document.getElementById('price_crypto').value = crypto[option.value]['price']
+                }
+            }
+
+        updateCrypto()
+
+    </script>
+
+
+</body>
+</html>

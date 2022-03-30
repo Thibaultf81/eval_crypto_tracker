@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Crypto Tracker</title>
+    <link rel="stylesheet" href="../static/style.css"></link>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1><a href="../">Crypto Tracker</a></h1>
+            <div class="menu_buttons">
+                <form action="/achat">
+                    <input type="submit" value="Acheter">
+                </form>
+                <form action="/vente">
+                    <input type="submit" value="Vendre">
+                </form>
+            </div>
+        </header>
+
+        <div class="invests">
+            <p class="total_invests">{{ total_invests }} €</p>
+            <p class="win_loss">+/- values : {{ symbol_win_loss }}{{ win_loss }} €</p>
+        </div>
+
+        <div class="list_crypto">
+            {% for crypto in wallet_crypto %}
+            <div class="crypto">
+                
+                <h3>{{ crypto }}</h3>quantité : {{ wallet_crypto[crypto]['quantity'] }}
+                
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</body>
+</html>
